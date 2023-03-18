@@ -1,5 +1,5 @@
 /*
-17. 옷가게 할인 받기
+1. 옷가게 할인 받기
 
 내 풀이
 function solution(price) {
@@ -9,7 +9,7 @@ function solution(price) {
     else return parseInt(price);
 }
 
-18. 아이스 아메리카노
+2. 아이스 아메리카노
 
 내 풀이
 function solution(money) {
@@ -17,14 +17,14 @@ function solution(money) {
     return answer;
 }
 
-19. 나이 출력
+3. 나이 출력
 
 내 풀이
 function solution(age) {
     return answer = 2022 - age + 1;
 }
 
-20. 배열 뒤집기
+4. 배열 뒤집기
 
 다른사람 풀이
 #1

@@ -1,5 +1,5 @@
 /*
-9. 중앙값 구하기
+2. 중앙값 구하기
 
 sort() - 문자열 기준으로 정렬한다 따라서 숫자 정렬 할때는
 sort((a,b)=>a-b)
@@ -15,7 +15,7 @@ function solution(array) {
     return answer = newArray[Math.floor(newArray.length / 2)];
 }
 
-10. 최빈값 구하기
+3. 최빈값 구하기
 내 풀이
 function solution(array) {
     const sortedArray = array.sort((a,b)=>a-b);
@@ -62,7 +62,7 @@ function solution(array) {
 //1. 앞에서부터 차례대로 원소를 확인하며 갯수를 센다
 //2. 최반값을 그때그때 기록한다.
 
-11. 짝수는 싫어요
+4. 짝수는 싫어요
 
 내 풀이
 function solution(n) {
@@ -71,35 +71,6 @@ function solution(n) {
         if(i % 2 === 1){
             answer.push(i);
         }
-    }
-    return answer;
-}
-
-12. 각도기
-
-다른 사람 풀이
-#1 filter
-function solution(angle) {
-    return [0, 90, 91, 180].filter(x => angle>=x).length;
-}
-
-#2 삼항 연산자
-function solution(angle) {
-    return angle < 90 ? :1  angle === 90 ? 2 : angle < 180 ? 3 : 4;
-}
-
-내 풀이
-function solution(angle) {
-    if(angle > 0 && angle < 90){
-        answer = 1;
-    }else if(angle === 90){
-        answer = 2;
-    }
-    else if(angle === 180){
-        answer = 4;
-    }
-    else{
-        answer = 3;
     }
     return answer;
 }

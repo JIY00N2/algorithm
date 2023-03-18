@@ -1,5 +1,5 @@
 /*
-21. 문자열 뒤집기
+1. 문자열 뒤집기
 
 다른사람 풀이
 function solution(my_string) {
@@ -17,7 +17,7 @@ function solution(my_string) {
 }
 
 
-22. 직각삼각형 출력하기
+2. 직각삼각형 출력하기
 
 다른사람 풀이 
 repeat() - 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열을 반환
@@ -54,7 +54,7 @@ rl.on('line', function (line) {
 });
 
 
-23. 짝수 홀수 개수
+3. 짝수 홀수 개수
 
 다른사람 풀이
 function solution(num_list) {
@@ -82,7 +82,7 @@ function solution(num_list) {
     return answer;
 }
 
-24. 문자 반복 출력하기
+4. 문자 반복 출력하기
 
 다른사람 풀이
 function solution(my_string, n) {

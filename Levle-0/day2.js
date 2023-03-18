@@ -1,5 +1,5 @@
 /* 
-5. 두 수의 나눗셈
+1. 두 수의 나눗셈
 parseInt() - 정수 반환
 
 다른 사람 풀이
@@ -14,7 +14,7 @@ function solution(num1, num2) {
     return answer;
 }
 
-6. 숫자 비교하기
+2. 숫자 비교하기
 
 다른 사람 풀이
 function solution(num1, num2) {
@@ -34,7 +34,7 @@ function solution(num1, num2) {
     return answer;
 }
 
-7. 분수의 덧셈
+3. 분수의 덧셈
 
 분자 분모의 최대 공약수로 나눔
 1. 분자 분모중 작은 수 찾기
@@ -76,7 +76,7 @@ function solution(numer1, denom1, numer2, denom2) {
 
 }
 
-8. 배열 두배 만들기 
+4. 배열 두배 만들기 
 다른 사람 풀이
 # 1
 map() - 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환
