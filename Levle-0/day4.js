@@ -1,5 +1,5 @@
 /*
-13. 피자 나눠먹기(1)
+1. 피자 나눠먹기(1)
 
 다른사람 풀이
 Math.ceil() - 주어진 숫자보다 크거나 같은 숫자 중 가장 작은 숫자를 integer 로 반환합니다.(올림)
@@ -12,7 +12,7 @@ function solution(n) {
     else return Math.floor((n/7)+1);
 }
 
-14. 피자 나눠먹기(2)
+2. 피자 나눠먹기(2)
 
 내 풀이
 function solution(n) {
@@ -21,7 +21,7 @@ function solution(n) {
     }
 }
 
-15. 피자 나눠먹기(3)
+3. 피자 나눠먹기(3)
 
 내 풀이
 function solution(n) {
@@ -30,7 +30,7 @@ function solution(n) {
     }
 }
 
-16. 배열의 평균값
+4. 배열의 평균값
 
 다른사람 풀이
 for(i of numbers){} - numbers에서 가져온 값을 순차적으로 하나씩 작동
