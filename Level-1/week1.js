@@ -20,17 +20,49 @@ function solution(n) {
     return answer;
 }
 
-3.
+3. 평균 구하기
 
 다른사람 풀이
+function average(array){
+  return array.reduce((a,b) => a+b) / array.length;
+}
 
 내 풀이
+function solution(arr) {
+    let sum = 0;
+    for(let i = 0; i<arr.length; i++){
+        sum += arr[i];
+    }
+    const answer = sum / arr.length;
+    return answer;
+}
 
-4.
+4. 자릿수 더하기
 
 다른사람 풀이
+function solution(n)
+{
+    var a = (n + '').split('');
+    var b = 0;
+    for(var i = 0; i < a.length; ++i) {
+        b += parseInt(a[i]);
+    }
+    return b;
+    //return n.toString().split('').reduce((a, b) => (a * 1) + (b * 1));
+}
 
 내 풀이
+function solution(n)
+{
+    const arr = String(n).split('');
+    let sum = 0;
+    
+    for(let i = 0; i < arr.length; i++){
+        const item = arr[i];
+        sum += Number(item);
+    }
+    return sum;
+}
 
 5.
 
