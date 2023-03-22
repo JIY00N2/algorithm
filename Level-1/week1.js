@@ -64,17 +64,39 @@ function solution(n)
     return sum;
 }
 
-5.
+5. x만큼 간격이 있는 n개의 숫자
 
 다른사람 풀이
+function solution(x, n) {
+    return Array(n).fill(x).map((v, i) => (i + 1) * v)
+}
 
 내 풀이
+function solution(x, n) {
+    let answer = [];
+    const len = x * n;
+    for(let i = 1; i <= n; i++){
+        answer.push(x*i);
+    }
+    return answer;
+}
 
-6.
+6. 자연수 뒤집어 배열로 만들기
 
 다른사람 풀이
+function solution(n) {
+    return n.toString().split('').reverse().map(o => o = parseInt(o));
+}
 
 내 풀이
+function solution(n) {
+    let nArr = [];
+    const strArr = String(n).split("");
+    for(let i = strArr.length - 1; i >= 0; i--){
+        nArr.push(Number(strArr[i]));
+    }
+    return nArr;
+}
 
 7.
 
