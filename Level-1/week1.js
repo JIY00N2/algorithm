@@ -98,17 +98,39 @@ function solution(n) {
     return nArr;
 }
 
-7.
-
-다른사람 풀이
+7. 정수 제곱근 판별
 
 내 풀이
+function solution(n) {
+    const sqrt = Math.sqrt(n);
+    if(n % sqrt === 0){
+        return (sqrt+1) ** 2;
+    }else{
+        return -1;
+    }
+}
 
-8.
+8. 문자열 내 p와 y의 개수
 
 다른사람 풀이
+function numPY(s){
+    return s.toUpperCase().split("P").length === s.toUpperCase().split("Y").length;
+}
 
 내 풀이
+function solution(s){
+    const lower = s.toLowerCase();
+    let pcnt = 0, ycnt = 0;
+    for(let i = 0; i < lower.length; i++){
+        if(lower[i] === "p"){
+            pcnt+=1;
+        }else if(lower[i] === "y"){
+            ycnt+=1;
+        }
+    }
+    if(pcnt === ycnt) return true;
+    else return false;
+}
 
 9.
 
