@@ -1,4 +1,4 @@
-/* 
+/* 2023.04.04
 1. 최댓값과 최솟값
 function solution(s) {
     let answer = '';
