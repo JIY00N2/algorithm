@@ -20,6 +20,18 @@ function solution(A,B){
     // 서로 곱한것이 최소
 }
 
+# 2023.04.17 ⭕
+function solution(A,B){
+    let sum = 0;
+    const sortA = A.sort((a,b)=>a-b); // 1 2 4
+    const sortB = B.sort((a,b)=>b-a); // 5 4 4
+    for(let i = 0; i < A.length; i++){
+        sum += sortA[i] * sortB[i];
+    }  
+    return sum;
+}
+
+
 2. 올바른 괄호 ❌
 스택 이용
 function solution(s){
@@ -50,5 +62,26 @@ function solution(s){
         }
     }
     return cum === 0? true: false;
+}
+
+# 2023.04.17 🔺
+처음이 ")" 일떄를 고려를 안함
+function solution(s){
+    const stack = [];
+    if(s[0] === ")")
+        return false;
+    for(let i = 0; i < s.length; i++){
+        const item = s[i];
+        if(item === "("){
+            stack.push(item);
+        }else{
+            stack.pop();
+        }
+    }
+    if(stack.length > 0)
+        return false;
+    else
+        return true;
+
 }
 */

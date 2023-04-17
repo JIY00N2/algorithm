@@ -7,8 +7,23 @@ function solution(s) {
     return answer;
 }
 
-2. JadenCase 문자열 만들기 ❌
+# 2023.04.17 ⭕
+function solution(s) {
+    let answer = '';
+    const numArr = s.split(" ").map((str)=>Number(str)).sort((a,b)=>a-b);
+    answer = numArr[0] + " " + numArr[numArr.length-1];
+    return answer;
+}
 
+다른사람 풀이
+function solution(s) {
+    const arr = s.split(' ');
+
+    return Math.min(...arr)+' '+Math.max(...arr);
+}
+
+2. JadenCase 문자열 만들기 ❌
+# 2023.04.17 ❌
 function solution(s) {
     const arr = s
     .toLowerCase() // 3people unfollowed me
