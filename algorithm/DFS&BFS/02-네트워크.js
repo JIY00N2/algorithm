@@ -24,7 +24,6 @@ function solution(n, computers) {
     }
     return answer;
 }
-/*dfs
+dfs
 방문 여부를 체크하며 if문을 통해 해당 컴퓨터와 연결 되어있는지, 방문을 했었는지를 재귀 함수로 뻗어나가면서 확인하고 answer의 값을 증가시켜 답을 리턴했다.
-*/
 */
