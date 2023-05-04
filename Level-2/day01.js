@@ -7,7 +7,7 @@ function solution(s) {
     return answer;
 }
 
-# 2023.04.17 ⭕
+# 2023.05.04 ⭕
 function solution(s) {
     let answer = '';
     const numArr = s.split(" ").map((str)=>Number(str)).sort((a,b)=>a-b);
@@ -23,7 +23,7 @@ function solution(s) {
 }
 
 2. JadenCase 문자열 만들기 ❌
-# 2023.04.17 ❌
+# 2023.05.04 ❌
 function solution(s) {
     const arr = s
     .toLowerCase() // 3people unfollowed me

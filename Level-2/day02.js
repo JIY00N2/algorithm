@@ -20,7 +20,7 @@ function solution(A,B){
     // 서로 곱한것이 최소
 }
 
-# 2023.04.17 ⭕
+# 2023.05.04 ⭕
 function solution(A,B){
     let sum = 0;
     const sortA = A.sort((a,b)=>a-b); // 1 2 4
@@ -32,7 +32,7 @@ function solution(A,B){
 }
 
 
-2. 올바른 괄호 ❌
+2. 올바른 괄호 ⭕
 스택 이용
 function solution(s){
     let stack = [];
