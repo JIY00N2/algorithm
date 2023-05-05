@@ -27,7 +27,7 @@ function solution(s) {
 // 1. 문자열에서 0을 삭제한다.
 // 2. 0을 제거한 문자열의 길이를 2진수로 변환해 반복
 
-# 2023.04.17 ❌
+# 2023.05.05 ❌
 function solution(s) {
     var answer = [];
     let zeroCnt = 0;
