@@ -42,6 +42,10 @@ function solution(n,a,b)
         a = Math.ceil(a/2);
         b = Math.ceil(b/2);
         cnt++;
+        // a b cnt
+        // 2 4 1
+        // 1 2 2
+        // 1 1 3
     }
 
     return cnt;
