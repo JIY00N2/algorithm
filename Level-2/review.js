@@ -15,4 +15,14 @@
 #2023.05.09
 1. N개의 최소공배수
 2. 멀리 뛰기
+#2023.05.11
+1. 귤 고르기
+2. 괄호 회전하기
+3. H-index
+4. 연속 부분 수열 합의 개수
 */
+let score = 80;
+let copy = score;
+console.log(score, copy);
+score = 100;
+console.log(score, copy);
