@@ -53,4 +53,31 @@ function solution(k, tangerine) {
     }
     return answer;
 
+    function solution(k, tangerine) {
+    const obj = {};
+    // 같은 종이 몇개가 있는지 확인한다.
+    tangerine.forEach((n) => {
+        // obj[n] 값이 있으면 1을 더한 값을
+        // obj[n] 값이 없으면 1을 넣어준다.
+        obj[n] = ++obj[n] || 1;
+    });
+    // obj { '1': 1, '2': 2, '3': 2, '4': 1, '5': 2 }
+    // 서로 다른 종류의 수의 최솟값을 구하기 위해서는 종류는 상관없고 값만 필요
+    // Object.values() 메서드를 통해 값만 추출한 후 [ 1, 2, 2, 1, 2 ]
+    // sort 로 내림차순 정렬 [ 2, 2, 2, 1, 1 ]
+    const kind = Object.values(obj).sort((a,b) => b - a);
+    let sum = 0;
+    let answer = 0;
+    // kind를 하나씩 체크
+    for(let num of kind){
+        // 한번 for문이 돌때마다 answer값에 1을 증가시키고
+        answer++;
+        // sum 값에 들어온 값들을 더해줌
+        sum += num;
+        // sum의 값이 k보다 크거나 같으면 최솟값을 만족시켰으므로 for문 중지
+        if(sum >= k)
+            break;
+    }
+    return answer;
+}
 */
