@@ -80,4 +80,25 @@ function solution(k, tangerine) {
     }
     return answer;
 }
+
+3. 연속 부분 수열의 합
+function solution(elements) {
+    let answer = 0;
+    const circle = elements.concat(elements); // [7, 9, 1, 1, 4]
+    const mySet = new Set();
+    // i = 길이가 i 인 수열을 구하기 위해
+    // j = 연속 부분 수열의 시작점을 구하기 위해
+    for(let i = 1; i < elements.length; i++){
+        for(let j = 0; j < elements.length; j++){
+            // 이중 for문을 돌면서 circle의 인덱서 j 부터 j+i-1까지의 배열을
+            // slice() 하고 reduce()를 이용해 전부 더해줌
+            const sumLengthI = circle.slice(j, j+i).reduce((acc,cur) => { return acc += cur;}, 0);
+            // sumLengthI = 길이가 i인 j부터 j+i-1까지의 연속 부분 수열의 합을 set에 add한다.
+            mySet.add(sumLengthI);
+        }
+    }
+    // 길이가 elements인 연속 부분 수열의 합은 반드시 하나이기에 마지막에 하나 더해준다.
+    answer = mySet.size+1;
+    return answer;
+}
 */
