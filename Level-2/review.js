@@ -21,8 +21,4 @@
 3. H-index
 4. 연속 부분 수열 합의 개수
 */
-let score = 80;
-let copy = score;
-console.log(score, copy);
-score = 100;
-console.log(score, copy);
+
