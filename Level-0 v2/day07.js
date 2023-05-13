@@ -19,4 +19,15 @@ function solution(a, b, c, d) {
     if (b === d) return a * c
     if (c === d) return a * b
 
+    5. 문자열 여러 번 뒤집기
+    function solution(my_string, queries) {
+    let answer = '';
+    for (let i = 0; i < queries.length; i++) {
+        let firstText = my_string.substring(0,queries[i][0]);
+        let middleText = my_string.substring(queries[i][0], queries[i][1]+1).split('').reverse().join('');
+        let lastText = my_string.substr(queries[i][1]+1);
+        my_string = firstText + middleText + lastText;
+    }
+    answer = my_string;
+ 
 */
