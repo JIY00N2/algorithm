@@ -166,6 +166,16 @@ function solution(left, right) {
 
 8. 문자열 다루기 기본
 
+function solution(s) {
+    if(s.length !== 4 && s.length !== 6)
+        return false;
+    for(let i = 0; i < s.length; i++){
+        if(isNaN(Number(s[i]))){
+            return false;
+        }
+    }
+    return true;
+}
 다른사람 풀이
 function alpha_string46(s){
     var regex = /^\d{6}$|^\d{4}$/;
