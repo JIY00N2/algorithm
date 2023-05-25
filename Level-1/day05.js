@@ -177,6 +177,23 @@ function solution(n, arr1, arr2) {
     return newArr;
 }
 
+function solution(n, arr1, arr2) {
+    var answer = [];
+    const binArr1 = arr1.map(num => num.toString(2).padStart(n,"0"));
+    const binArr2 = arr2.map(num => num.toString(2).padStart(n,"0"));
+    for(let i = 0; i < n; i++){
+        let str = '';
+        for(let j = 0; j < n; j++){
+            if(binArr1[i][j] === "0" && binArr2[i][j] === "0"){
+                str += " ";
+            }else{
+                str += "#";
+            }
+        }
+        answer.push(str);
+    }
+    return answer;
+}
 6. 문자열 내 마음대로 정렬하기 ❌
 
 내 풀이
