@@ -29,7 +29,7 @@ function solution(nums) {
 내 풀이
 function solution(k, m, score) {
     let price = 0, sum = 0;
-    const boxCnt = ~~(score.length / m); // 4개
+
     const sortedArr = score.sort((a,b)=>b-a);
     for(let i = 0; i < sortedArr.length; i++){
         if((i+1) % m === 0){
@@ -38,8 +38,7 @@ function solution(k, m, score) {
     }
     return sum;
 }
-// 1. boxCnt = score.length / m  12개 / 3개 상자 4개
-// 2. 내림차순으로 정렬해서 박스에 3개씩 넣음
+// 내림차순으로 정렬해서 박스에 3개씩 넣음
 
 3. 실패율 ❌
 
