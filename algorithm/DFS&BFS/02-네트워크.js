@@ -3,6 +3,11 @@
 
 내 풀이
 function solution(n, computers) {
+    // const computers = [
+        [1, 1, 0],
+        [1, 1, 0],
+        [0, 0, 1]
+    ];
     var answer = 0;
     const visited = Array.from({length:n}, i => false); //[ false, false, false ]
     // let visited = new Array(n).fill(false); // 방문하지않음
