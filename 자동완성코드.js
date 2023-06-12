@@ -1,6 +1,5 @@
 class Node {
-  constructor(value = "") {
-    this.value = value;
+  constructor() {
     this.children = new Map();
     this.end = false;
   }
@@ -11,37 +10,39 @@ class Trie {
     this.root = new Node();
   }
 
-  insert(string) {
-    let currentNode = this.root;
-    for (const char of string) {
-      if (!currentNode.children.has(char)) {
-        currentNode.children.set(char, new Node());
+  // 단어를 트라이에 삽입
+  insert(word) {
+    let node = this.root;
+    for (const char of word) {
+      if (!node.children.has(char)) {
+        node.children.set(char, new Node());
       }
-      currentNode = currentNode.children.get(char);
+      node = node.children.get(char);
     }
-    currentNode.end = true;
+    node.end = true;
   }
 
-  automaticCompletion(prefix) {
-    let currentNode = this.root;
-    for (const char of prefix) {
-      if (!currentNode.children.has(char)) {
-        return [];
-      }
-      currentNode = currentNode.children.get(char);
-    }
-
+  // 주어진 접두사를 기준으로 자동 완성된 단어들을 반환
+  autoComplete(prefix) {
     const result = [];
-    this.move(currentNode, prefix, result);
+    let node = this.root;
+    for (const char of prefix) {
+      if (!node.children.has(char)) {
+        return result;
+      }
+      node = node.children.get(char);
+    }
+    this.traverse(node, prefix, result);
     return result;
   }
 
-  move(currentNode, prefix, result) {
-    if (currentNode.end) {
-      result.push(prefix);
+  // 재귀적으로 노드, 현재 단어, 결과 배열을 순회하면서 자동 완성된 단어를 찾음
+  traverse(node, word, result) {
+    if (node.end) {
+      result.push(word);
     }
-    for (const [char, child] of currentNode.children) {
-      this.move(child, prefix + char, result);
+    for (const [char, child] of node.children) {
+      this.traverse(child, word + char, result);
     }
   }
 }
@@ -55,7 +56,7 @@ trie.insert("book");
 trie.insert("bag");
 trie.insert("box");
 
-console.log(trie.automaticCompletion("c")); // [ 'cat', 'coffee', 'cow' ]
-console.log(trie.automaticCompletion("co")); // [ 'coffee', 'cow' ]
-console.log(trie.automaticCompletion("b")); // [ 'book', 'box', 'bag' ]
-console.log(trie.automaticCompletion("bo")); // [ 'book', 'box' ]
+console.log(trie.autoComplete("c")); // [ 'cat', 'coffee', 'cow' ]
+console.log(trie.autoComplete("co")); // [ 'coffee', 'cow' ]
+console.log(trie.autoComplete("b")); // [ 'book', 'box', 'bag' ]
+console.log(trie.autoComplete("bo")); // [ 'book', 'box' ]
