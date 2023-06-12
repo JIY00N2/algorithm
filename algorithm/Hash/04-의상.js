@@ -21,4 +21,16 @@ function solution(clothes) {
 /*
 14:10 ~ 15:17
 
+
+function solution(clothes) {
+    let answer = 1;
+    const clothObj = {};
+    clothes.forEach((v) => {
+        clothObj[v[1]] = (clothObj[v[1]] || 0) + 1;
+    })
+    
+    const kindCnt = Object.values(clothObj);
+    kindCnt.forEach((v) => answer *= v + 1);
+    return answer - 1;
+}
 */
