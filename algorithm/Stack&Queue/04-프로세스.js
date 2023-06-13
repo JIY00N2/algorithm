@@ -133,4 +133,9 @@ function solution(priorites, location){
     }
     return count;
 }
+
+
+splice vs shift 속도 차이
+https://velog.io/@dorito/JavaScript-Splice-vs-Shift-%EC%86%8D%EB%8F%84-%EC%B0%A8%EC%9D%B4-%EA%B6%81%EA%B8%88%ED%95%B4%EC%84%9C-%EA%B5%AC%EA%B8%80%EB%A7%81-z9aiz4b1
+
 */
