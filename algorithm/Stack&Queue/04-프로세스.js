@@ -139,3 +139,25 @@ splice vs shift 속도 차이
 https://velog.io/@dorito/JavaScript-Splice-vs-Shift-%EC%86%8D%EB%8F%84-%EC%B0%A8%EC%9D%B4-%EA%B6%81%EA%B8%88%ED%95%B4%EC%84%9C-%EA%B5%AC%EA%B8%80%EB%A7%81-z9aiz4b1
 
 */
+
+function solution(priorities, location) {
+  let answer = 0;
+  let priority = 0;
+  const arr = priorities.map((v, i) => [v, i]);
+  // [ [ 2, 0 ], [ 1, 1 ], [ 3, 2 ], [ 2, 3 ] ]
+  const stack = [];
+  while (arr.length > 0) {
+    let current = arr.shift();
+    if (arr.some((v) => v[0] > current[0])) {
+      arr.push(current);
+    } else {
+      priority++;
+      if (current[1] === location) {
+        return priority;
+      }
+    }
+  }
+  return answer;
+}
+
+// 우선순위 큐
