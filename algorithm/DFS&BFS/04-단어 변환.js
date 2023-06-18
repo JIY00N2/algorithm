@@ -1,47 +1,64 @@
-/*2023.04.
-# 
-
-다른사람 풀이 
-
-내 풀이
+// 2023.06.18 15:45 ~ 16:28
 function solution(begin, target, words) {
-    let answer = 0;
-    let visited = []; // 방문 여부를 저장할 변수 선언
-    let queue = []; // bfs를 돌기 위한 큐 선언
-    queue.push([begin, answer]); // 1. 큐에 [시작단어, 변경횟수]를 넣음
-    // 2. words배열에 target이 없으면 0 반환
-    if(!words.includes(target))
-        return 0;
-    // 3. bfs
-    while(queue.length){
-        let [v, cnt] = queue.shift(); // 큐의 맨 왼쪽 값을 꺼냄
-        // 꺼낸 값과 target이 같으면 cnt 반환
-        if(v === target)
-            return cnt;
-        //forEach() - 주어진 함수를 배열 요소 각각에 대해 실행
-        words.forEach(word => {
-            let notEqual = 0; // 다른 갯수를 구하기위해 변수를 선언
-            // 방문했던 단어면 pass
-            if(visited.includes(word))
-                return;
-            //word를 반복하면서 다른 알파벳의 갯수를 체크한다
-            for(let i = 0; i < word.length; i++){
-                if(word[i] !== v[i])
-                    notEqual++;
-            }
-            // 만약 다른게 1개라면
-            if(notEqual === 1){
-                // 큐에 [단어, 횟수] 형태로 넣음
-                // ++cnt는 cnt에 이미 1이 더해진 상태로 보여줌
-                queue.push([word, ++cnt]);
-                // ex) hit->hot이 되었을때 1이된다.
-                visited.push(word); //방문처리
-            }
-        });
+  // 몇 단계를 거치는지
+  let stage = 0;
+  // 큐 선언 및 초기값 설정 [시작단어, 단계, 방문여부]
+  const queue = [[begin, stage]];
+  // words 배열안에 target이 없다면, 먼저 가지치기로 걸러주기
+  if (!words.includes(target)) return 0;
+
+  while (queue.length) {
+    let [word, stage] = queue.shift();
+    // 정답
+    if (word === target) {
+      return stage;
     }
-    
-    return answer;
+    words.forEach((item) => {
+      // 알파벳이 같지 않은 개수
+      let notEqualAlpaCnt = 0;
+
+      for (let i = 0; i < item.length; i++) {
+        if (item[i] !== word[i]) {
+          notEqualAlpaCnt++;
+        }
+      }
+      // 한개의 알파벳이 다르다면
+      if (notEqualAlpaCnt === 1) {
+        queue.push([item, stage + 1]);
+      }
+    });
+  }
+  return stage;
 }
-// 최소 몇단계의 과정 -> bfs
-// 큐를 이용, 큐에서 뺀 노드는 항상 방문처리, 조건에 맞으면 큐에 푸시, 정답일때 return
-*/
+/*
+  1. 알고리즘 or 자료구조 선택 이유
+  begin에서 target으로 변환하는 가장 짧은 변환 과정을 찾으려고 하니까 이 문제도 BFS를 이용합니다.
+  BFS는 큐를 사용하여 풀 수 있습니다!
+  
+  2. 시간 복잡도 or 결과
+  O(n^2)인 것 같은데 잘 모르겠습니다..
+  while문 + 내부 forEach 문
+  1. 방문 했을때의 코드가 있을때
+  테스트 1 〉	통과 (0.16ms, 33.6MB)
+  테스트 2 〉	통과 (0.21ms, 33.4MB)
+  테스트 3 〉	통과 (19.85ms, 36.8MB)
+  테스트 4 〉	통과 (0.18ms, 33.6MB)
+  테스트 5 〉	통과 (0.07ms, 33.6MB)
+  
+  2. 방문 했을때의 코드를 쓰지 않았을 때,
+  테스트 1 〉	통과 (0.19ms, 33.5MB)
+  테스트 2 〉	통과 (0.25ms, 33.5MB)
+  테스트 3 〉	통과 (3.79ms, 37.1MB)
+  테스트 4 〉	통과 (0.19ms, 33.6MB)
+  테스트 5 〉	통과 (0.14ms, 33.4MB)
+  
+  3. 기타 의견(접근법)
+  앞에 문제랑 비슷하게 풀려고 노력했습니다!
+  프로그래머스 에디터에서 풀었을 때는 몰랐는데,
+  VSC에서는 if(visited){ return; }이 필요 없는 코드로 떠서, 빼고 돌렸더니 답이 인정됐습니다.
+  왜일까요..?
+  
+  복붙하는 과정에서 들여쓰기 실수를 해서 다시 commit 합니다..
+  4. 참고 링크
+  
+  */
