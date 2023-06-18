@@ -1,46 +1,61 @@
-/*2023.04.28
-03 게임 맵 최단거리
-
-내 풀이
-// 최단거리는 bfs
+// 2023.06.18 14:45~15:19
 function solution(maps) {
-    var answer = 0;
-    // 상,하(행이동), 좌,우(열이동)
-    // 상,하,좌,우 행=dx=[-1,1,0,0];
-    // 상,하,좌,우 열=dy=[0,0,-1,1];
-    // dx,dy 상하좌우로 이동할시의 칸수
-    const dx = [-1,1,0,0];
-    const dy = [0,0,-1,1];
-    const xLen = maps.length; // 5 행
-    const yLen = maps[0].length; // 5  열
-    // 도착지점의 좌표
-    const goalX = xLen - 1; 
-    const goalY = yLen - 1;
-    // bfs에 사용할 큐
-    const queue = [];
-    // 처음 시작은 가장 상단 0,0에서 시작하고 이동한 칸수는 1칸
-    // x, y, 이동 칸수
-    queue.push([0,0,1]);
-    //bfs시작
-    while(queue.length){
-        // 현재위치, 현재까지 이동한 칸수를 큐에서 빼서 현재의 위치가 도착지점의 좌표와 같으면 현재까지 이동한 칸수를 반환
-        const [curX, curY, move] = queue.shift();
-        if(curY === goalY && curX === goalX)
-            return move;
-        // 상하좌우 4번 반복
-        for(let i = 0; i < 4; i++){
-            const nx = curX + dx[i];
-            const ny = curY + dy[i];
-            if(nx >= 0 && nx < xLen && ny >=0 && ny < yLen && maps[nx][ny] === 1){
-                // 해당 좌표와 이동 칸수 1 증가
-                queue.push([nx,ny,move+1]);
-                // 다시 밟지 않도록 0으로 변경
-                maps[nx][ny] = 0;
-            }
+  // [상, 하 , 좌, 우]
+  const dx = [0, 0, -1, 1]; // 좌,우로 이동
+  const dy = [-1, 1, 0, 0]; // 상,하로 이동
+  // 게임 맵의 크기
+  const xLength = maps[0].length; // 가로 길이
+  const yLength = maps.length; // 세로 길이
+  // 목표 지점
+  const xGoalIndex = xLength - 1;
+  const yGoalIndex = yLength - 1;
+  // 큐 초기화 y현재위치, x현재위치, 움직인 칸 수
+  const queue = [[0, 0, 1]];
+
+  while (queue.length) {
+    const [yCurrIndex, xCurrIndex, move] = queue.shift();
+    // 정답
+    if (xCurrIndex === xGoalIndex && yCurrIndex === yGoalIndex) {
+      return move;
+    } else {
+      // 상,하,좌,우 4번 반복
+      for (let i = 0; i < 4; i++) {
+        const moveX = xCurrIndex + dx[i];
+        const moveY = yCurrIndex + dy[i];
+        // 맵을 벗어나지 않고, 이동한 칸이 1이라면
+        if (
+          moveX >= 0 &&
+          moveX < xLength &&
+          moveY >= 0 &&
+          moveY < yLength &&
+          maps[moveY][moveX] === 1
+        ) {
+          queue.push([moveY, moveX, move + 1]);
+          // 갔던 곳을 다시 가지 않음
+          maps[moveY][moveX] = 0;
         }
+      }
     }
-    //모든 칸을 돌았으나 도착지점에 갈 수 없었고 반복문을 나왔다면 -1을 반환하는 것
-    return -1;
+  }
+  return -1;
 }
+/*
+1. 알고리즘 or 자료구조 선택 이유
+지도를 주고 채워진 영역을 찾아야 하는 경우 높은 확률로 DFS/BFS 문제입니다.
+캐릭터가 도착 지점까지 지나야 하는 칸의 최솟값을 구해야 하므로 BFS를 사용합니다.
+BFS는 큐를 이용하여 구현합니다!
+
+2. 시간 복잡도 or 결과
+시간 복잡도가 O(n)일까요?
+
+테스트 1 〉	통과 (13.44ms, 38.1MB)
+테스트 2 〉	통과 (6.27ms, 37.7MB)
+테스트 3 〉	통과 (7.82ms, 38MB)
+테스트 4 〉	통과 (6.65ms, 37.8MB)
+
+3. 기타 의견(접근법)
+개인적으로 x, y 정하는 게 헷갈렸는데, 노트로 메모하면서 하니까 이해하기 쉬웠습니다!
+
+4. 참고 링크
 
 */
