@@ -1,3 +1,4 @@
+// 2606 바이러스
 const input = require('fs')
   .readFileSync('/dev/stdin')
   .toString()
