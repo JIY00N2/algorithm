@@ -7,7 +7,7 @@ const input = require('fs')
   .map((el) => el.split(' ').map(Number));
 
 const [col, row] = input[0]; // [세로, 가로]
-const array = input.slice(1);
+const map = input.slice(1);
 const v = Array.from({ length: col }, () => Array(row).fill(-1));
 let [goalY, goalX] = [];
 const dir = [
@@ -21,7 +21,7 @@ const dir = [
 for (let i = 0; i < col; i++) {
   for (let j = 0; j < row; j++) {
     // 목표지점 찾기
-    if (array[i][j] === 2) {
+    if (map[i][j] === 2) {
       [goalY, goalX] = [i, j];
     }
   }
@@ -46,7 +46,7 @@ function bfs(sy, sx) {
         continue;
       }
       // 2. 원래 배열이 0인곳은 갈 수 없는 곳이니 무시
-      if (array[ny][nx] === 0) {
+      if (map[ny][nx] === 0) {
         continue;
       }
       // 3. 방문 한 곳 제외
@@ -64,7 +64,7 @@ const result = bfs(goalY, goalX);
 
 for (let i = 0; i < col; i++) {
   for (let j = 0; j < row; j++) {
-    if (array[i][j] === 0) {
+    if (map[i][j] === 0) {
       result[i][j] = 0;
     }
   }
