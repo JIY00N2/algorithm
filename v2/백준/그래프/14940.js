@@ -27,6 +27,10 @@ for (let i = 0; i < col; i++) {
   }
 }
 
+function inRange(y, x) {
+  return y >= 0 && y < col && x >= 0 && x < row;
+}
+
 function bfs(sy, sx) {
   const q = [[sy, sx]];
   v[sy][sx] = 0; // 방문처리
@@ -37,19 +41,20 @@ function bfs(sy, sx) {
       // 4방향 탐색
       const ny = curY + dir[i][0]; // ny = nextY
       const nx = curX + dir[i][1];
-      // 격자 확인
-      if (nx >= 0 && nx < row && ny >= 0 && ny < col) {
-        // 원래 배열이 0(갈 수 없는 곳)은 제외
-        if (array[ny][nx] === 0) {
-          continue;
-        }
-        // 방문 한 곳 제외
-        if (v[ny][nx] !== -1) {
-          continue;
-        }
-        v[ny][nx] = cnt + 1;
-        q.push([ny, nx]);
+      // 1. 격자 밖은 무시
+      if (!inRange(ny, nx)) {
+        continue;
       }
+      // 2. 원래 배열이 0인곳은 갈 수 없는 곳이니 무시
+      if (array[ny][nx] === 0) {
+        continue;
+      }
+      // 3. 방문 한 곳 제외
+      if (v[ny][nx] !== -1) {
+        continue;
+      }
+      v[ny][nx] = cnt + 1;
+      q.push([ny, nx]);
     }
   }
   return v;
