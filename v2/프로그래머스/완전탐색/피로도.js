@@ -29,11 +29,11 @@ function getPermutations(arr, selectNum) {
     arr.forEach((fixed, index, origin) => {
       const rest = [...origin.slice(0, index), ...origin.slice(index + 1)];
       const permutations = getPermutations(rest, selectNum - 1);
-      const attatched = permutations.map((permuatation) => [
+      const attached = permutations.map((permutation) => [
         fixed,
-        ...permuatation,
+        ...permutation,
       ]);
-      results.push(...attatched);
+      results.push(...attached);
     });
   }
   return results;
