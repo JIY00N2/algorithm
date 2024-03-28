@@ -1,6 +1,6 @@
 ### 1. List
 
-<img src="list.png" width="80%" height="100%">
+<img src="img/list.png" width="80%" height="100%">
 
 - Array list: 연속적, 배열 기반
 - Linked list: 비연속적, 노드 기반
