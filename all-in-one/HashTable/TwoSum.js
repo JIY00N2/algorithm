@@ -1,3 +1,4 @@
+// 1. 객체
 function twoSum(nums, target) {
   let answer = [-1, -1];
   const object = {};
@@ -9,6 +10,23 @@ function twoSum(nums, target) {
     }
     object[v] = id;
   });
+  return answer;
+}
+
+// 2. map
+function twoSum() {
+  let answer = [-1, -1];
+  const map = new Map();
+  nums.forEach((v, id) => {
+    const needed = target - v;
+    if (map.has(needed)) {
+      const neededId = map.get(needed);
+      answer = [neededId, id];
+    } else {
+      map.set(v, id);
+    }
+  });
+
   return answer;
 }
 
