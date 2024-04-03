@@ -132,20 +132,21 @@ console.log(twoSumTwoPointer([4, 1, 9, 7, 5, 3, 18], 14));
 
 ```ts
 class Node {
-  constructor(value = 0, next = null) {
-    this.value = value;
+  constructor(val = 0, next = null) {
+    this.val = val;
     this.next = next;
   }
 }
 
 class LinkedList {
-  constructor() {
-    this.size = 0;
-    this.head = null;
+  constructor(head = null, size = 0) {
+    this.head = head;
+    this.size = size;
   }
 
-  insert_back(value) {
-    const new_node = new Node(value);
+  // 뒤에 추가
+  push(val) {
+    const new_node = new Node(val);
     if (!this.head) {
       this.head = new_node;
     } else {
@@ -160,8 +161,9 @@ class LinkedList {
 
   // exception1: if self.head is None
   // exception2: if idx < 0 or idx > self.size
-  insert_at(idx, value) {
-    const new_node = new Node(value);
+  // 특정 위치에 추가
+  add(idx, val) {
+    const new_node = new Node(val);
     if (idx === 0) {
       new_node.next = this.head;
       this.head = new_node;
@@ -177,25 +179,28 @@ class LinkedList {
   }
 
   // exception if idx < 0 || idx >= this.size
+  // 노드 값 가져오기
   get(idx) {
     let current = this.head;
     for (let i = 0; i < idx; i++) {
       current = current.next;
     }
-    return current.value;
+    return current.val;
   }
 
   // exception: if idx < 0 or idx >= self.size
-  set(idx, value) {
+  // 값 변경
+  set(idx, val) {
     let current = this.head;
     for (let i = 0; i < idx; i++) {
       current = current.next;
     }
-    current.value = value;
+    current.val = val;
   }
 
   // exception: if idx < 0 or idx >= self.size
-  remove_at(idx) {
+  // 특정 위치 노드 삭제
+  remove(idx) {
     if (idx === 0) {
       this.head = this.head.next;
     } else {
@@ -208,7 +213,8 @@ class LinkedList {
     this.size--;
   }
 
-  remove_back() {
+  // 맨 마지막 요소 제거
+  pop() {
     const last_index = this.size - 1;
     let current = this.head;
     for (let i = 0; i < last_index - 1; i++) {
@@ -237,21 +243,21 @@ class LinkedList {
 
 ```ts
 class Node {
-  constructor(value = 0, next = null) {
-    this.value = value;
+  constructor(val = 0, next = null) {
+    this.val = val;
     this.next = next;
   }
 }
 
 class LinkedList {
-  constructor() {
-    this.size = 0;
-    this.head = null;
-    this.tail = null;
+  constructor(head = null, tail = null, size = 0) {
+    this.head = head;
+    this.tail = tail;
+    this.size = size;
   }
 
-  insert_back(value) {
-    const new_node = new Node(value);
+  push(val) {
+    const new_node = new Node(val);
     if (!this.head) {
       this.head = new_node;
       this.tail = new_node;
@@ -264,7 +270,7 @@ class LinkedList {
 
   // exception1: if self.head is None
   // exception2: if idx < 0 or idx > self.size
-  insert_at(idx, value) {
+  add(idx, val) {
     const new_node = new Node(value);
     if (idx === 0) {
       new_node.next = this.head;
@@ -286,21 +292,21 @@ class LinkedList {
     for (let i = 0; i < idx; i++) {
       current = current.next;
     }
-    return current.value;
+    return current.val;
   }
 
   // exception: if idx < 0 or idx >= self.size
-  set(idx, value) {
+  set(idx, val) {
     let current = this.head;
     for (let i = 0; i < idx; i++) {
       current = current.next;
     }
-    current.value = value;
+    current.val = val;
   }
 
   // exception1: if idx < 0 or idx >= self.size
   // exception2: size === 1 => size === 0 / tail problem
-  remove_at(idx) {
+  remove(idx) {
     if (idx === 0) {
       this.head = this.head.next;
     } else {
@@ -313,7 +319,7 @@ class LinkedList {
     this.size--;
   }
 
-  remove_back() {
+  pop() {
     const last_index = this.size - 1;
     let current = this.head;
     for (let i = 0; i < last_index - 1; i++) {
@@ -342,22 +348,22 @@ class LinkedList {
 
 ```ts
 class Node {
-  constructor(value = 0, next = null, prev = null) {
-    this.value = value;
+  constructor(val = 0, next = null, prev = null) {
+    this.val = val;
     this.next = next;
     this.prev = prev;
   }
 }
 
 class LinkedList {
-  constructor() {
-    this.size = 0;
+  constructor(head = null, tail = null, size = 0) {
     this.head = null;
     this.tail = null;
+    this.size = 0;
   }
 
-  insert_back(value) {
-    const new_node = new Node(value);
+  push(val) {
+    const new_node = new Node(val);
     if (!this.head) {
       this.head = new_node;
       this.tail = new_node;
@@ -371,8 +377,8 @@ class LinkedList {
 
   // exception1: if self.head is None
   // exception2: if idx < 0 or idx > self.size
-  insert_at(idx, value) {
-    const new_node = new Node(value);
+  add(idx, val) {
+    const new_node = new Node(val);
     if (idx === 0) {
       new_node.next = this.head;
       this.head.prev = new_node;
@@ -397,20 +403,20 @@ class LinkedList {
     for (let i = 0; i < idx; i++) {
       current = current.next;
     }
-    return current.value;
+    return current.val;
   }
 
   // exception: if idx < 0 or idx >= self.size
-  set(idx, value) {
+  set(idx, val) {
     let current = this.head;
     for (let i = 0; i < idx; i++) {
       current = current.next;
     }
-    current.value = value;
+    current.val = val;
   }
 
   // exception: if idx < 0 or idx >= self.size
-  remove_at(idx) {
+  remove(idx) {
     if (idx === 0) {
       this.head = this.head.next;
       this.head.prev = null;
@@ -425,7 +431,7 @@ class LinkedList {
     this.size--;
   }
 
-  remove_back() {
+  pop() {
     this.tail = this.tail.prev;
     this.tail.next = null;
     this.size--;
