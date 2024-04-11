@@ -7,3 +7,5 @@
 ### 4. 리트코드 [Length Of Longest Substring](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/) while
 
 ### 5. 리트코드 [Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/) 투 포인터
+
+### 6. 리트코드 [3Sum](https://leetcode.com/problems/3sum/description/) 투 포인터
