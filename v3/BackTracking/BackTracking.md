@@ -3,3 +3,5 @@
 ### 2. 리트코드 [Permutation Sequence](https://leetcode.com/problems/permutation-sequence/description/) BackTracking 순열
 
 ### 3. 리트코드 [N-Queens](https://leetcode.com/problems/n-queens/description/) BackTracking
+
+### 4. 리트코드 [N-Queens2](https://leetcode.com/problems/n-queens-ii/description/) BackTracking
