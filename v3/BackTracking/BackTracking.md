@@ -12,4 +12,6 @@
 
 ### 7. 리트코드 22 [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/) BackTracking
 
-### 8. 리트코드 46[Permutations](https://leetcode.com/problems/permutations/description/) BackTracking 순열 o
+### 8. 리트코드 46 [Permutations](https://leetcode.com/problems/permutations/description/) BackTracking 순열 o
+
+### 9. 리트코드 47 [Permutatoins2](https://leetcode.com/problems/permutations-ii/description/) BackTracking 순열 해시
