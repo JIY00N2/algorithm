@@ -9,3 +9,5 @@
 ### 5. 백준 1025 [제곱수찾기](https://www.acmicpc.net/problem/1025) BackTracking
 
 ### 6. 백준 1062 [가르침](https://www.acmicpc.net/problem/1062) BackTracking
+
+### 7. 리트코드 22 [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/) BackTracking
