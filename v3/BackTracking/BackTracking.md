@@ -11,3 +11,5 @@
 ### 6. 백준 1062 [가르침](https://www.acmicpc.net/problem/1062) BackTracking
 
 ### 7. 리트코드 22 [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/) BackTracking
+
+### 8. 리트코드 46[Permutations](https://leetcode.com/problems/permutations/description/) BackTracking 순열 o
