@@ -8,4 +8,4 @@
 
 ### 5. 리트코드 525 medium [Contiguous Array](https://leetcode.com/problems/contiguous-array/description/) map
 
-### 6. 리트코드 791 medium [Custom Sort String](https://leetcode.com/problems/custom-sort-string/description/) map
+### 6. 리트코드 791 medium [Custom Sort String](https://leetcode.com/problems/custom-sort-string/description/) map o
