@@ -9,7 +9,8 @@
 1. 입력값이 하나일 경우(문자)
 
 ```ts
-const input = require('fs').readFileSync('/dev/stdin').toString().trim();
+const path = process.flatform === 'linux' ? '/dev/stdin' : 'example.txt';
+const input = require('fs').readFileSync(path).toString().trim();
 //input: hello
 //output: hello
 ```
@@ -17,9 +18,10 @@ const input = require('fs').readFileSync('/dev/stdin').toString().trim();
 2. 입력값이 하나일 경우(숫자)
 
 ```ts
-const input = +require('fs').readFileSync('/dev/stdin').toString().trim();
+const path = process.flatform === 'linux' ? '/dev/stdin' : 'example.txt';
+const input = +require('fs').readFileSync(path).toString().trim();
 또는
-const input = require('fs').readFileSync('/dev/stdin').toString().trim();
+const input = require('fs').readFileSync(path).toString().trim();
 let num = +input; 또는 parseInt(input) 또는 Number(input)
 //input: 8
 //output: 8
@@ -28,11 +30,8 @@ let num = +input; 또는 parseInt(input) 또는 Number(input)
 3. 입력값이 띄어쓰기로 구분된 한 줄의 값들인 경우(문자)
 
 ```ts
-const input = require('fs')
-  .readFileSync('/dev/stdin')
-  .toString()
-  .trim()
-  .split(' ');
+const path = process.flatform === 'linux' ? '/dev/stdin' : 'example.txt';
+const input = require('fs').readFileSync(path).toString().trim().split(' ');
 //input: hello world
 //output: ['hello', 'world']
 ```
@@ -40,8 +39,9 @@ const input = require('fs')
 4. 입력값이 띄어쓰기로 구분된 한 줄의 값들인 경우(숫자)
 
 ```ts
+const path = process.flatform === 'linux' ? '/dev/stdin' : 'example.txt';
 const input = require('fs')
-  .readFileSync('/dev/stdin')
+  .readFileSync(path)
   .toString()
   .trim()
   .split(' ')
@@ -53,11 +53,8 @@ const input = require('fs')
 5. 입력값이 여러 줄의 값들인 경우(문자)
 
 ```ts
-const input = require('fs')
-  .readFileSync('/dev/stdin')
-  .toString()
-  .trim()
-  .split('\n');
+const path = process.flatform === 'linux' ? '/dev/stdin' : 'example.txt';
+const input = require('fs').readFileSync(path).toString().trim().split('\n');
 //input:
 //a
 //b
@@ -69,8 +66,9 @@ const input = require('fs')
 6. 입력값이 여러 줄의 값들인 경우(숫자)
 
 ```ts
+const path = process.flatform === 'linux' ? '/dev/stdin' : 'example.txt';
 const input = require('fs')
-  .readFileSync('/dev/stdin')
+  .readFileSync(path)
   .toString()
   .trim()
   .split('\n')
@@ -87,8 +85,9 @@ const input = require('fs')
 7. 입력값이 여러 줄의 값들이 띄어쓰기로 구분되어 있는 경우(문자)
 
 ```ts
+const path = process.flatform === 'linux' ? '/dev/stdin' : 'example.txt';
 const input = require('fs')
-  .readFileSync('/dev/stdin')
+  .readFileSync(path)
   .toString()
   .trim()
   .split('\n')
@@ -109,8 +108,9 @@ const input = require('fs')
 8. 입력값이 여러 줄의 값들이 띄어쓰기로 구분되어 있는 경우(모두 숫자)
 
 ```ts
+const path = process.flatform === 'linux' ? '/dev/stdin' : 'example.txt';
 const input = require('fs')
-  .readFileSync('/dev/stdin')
+  .readFileSync(path)
   .toString()
   .trim()
   .split('\n')
