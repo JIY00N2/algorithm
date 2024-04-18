@@ -17,3 +17,5 @@
 ### 9. 리트코드 47 medium [Permutatoins2](https://leetcode.com/problems/permutations-ii/description/) BackTracking 순열 해시
 
 ### 10. 백준 1174 골5 [줄어드는 수](https://www.acmicpc.net/problem/1174) BackTracking , set으로 중복 제거
+
+### 11. 백분 1182 실2 [부분수열의 합](https://www.acmicpc.net/problem/1182) BackTracking
