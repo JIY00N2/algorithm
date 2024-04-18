@@ -15,3 +15,5 @@
 ### 8. 리트코드 46 medium [Permutations](https://leetcode.com/problems/permutations/description/) BackTracking 순열 o
 
 ### 9. 리트코드 47 medium [Permutatoins2](https://leetcode.com/problems/permutations-ii/description/) BackTracking 순열 해시
+
+### 10. 백준 1174 골5 [줄어드는 수](https://www.acmicpc.net/problem/1174) BackTracking , set으로 중복 제거
