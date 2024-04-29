@@ -7,3 +7,5 @@
 ### 4. 백준 1068 골5 [트리](https://www.acmicpc.net/problem/1068) dfs
 
 ### 5. 백준 1463 실3 [1로 만들기](https://www.acmicpc.net/problem/1463) dfs, 백트래킹
+
+### 6. 백준 1260 실2 [DFS와 BFS](https://www.acmicpc.net/problem/1260) dfs, bfs
