@@ -9,3 +9,5 @@
 ### 5. 백준 1463 실3 [1로 만들기](https://www.acmicpc.net/problem/1463) dfs, 백트래킹
 
 ### 6. 백준 1260 실2 [DFS와 BFS](https://www.acmicpc.net/problem/1260) dfs, bfs
+
+### 7. 백준 1325 실1 [효율적인 해킹](https://www.acmicpc.net/problem/1325) dfs
