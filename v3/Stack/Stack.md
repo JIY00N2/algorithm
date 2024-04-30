@@ -5,3 +5,5 @@
 ### 3. 리트코드 32 hard [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/description/) 스택
 
 ### 4. 리트코드 42 hard [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/) 스택
+
+### 5. 백준 1406 실2 [에디터](https://www.acmicpc.net/problem/1406) 2개의 스택
