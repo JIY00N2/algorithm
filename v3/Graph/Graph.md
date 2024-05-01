@@ -11,3 +11,5 @@
 ### 6. 백준 1260 실2 [DFS와 BFS](https://www.acmicpc.net/problem/1260) dfs, bfs
 
 ### 7. 백준 1325 실1 [효율적인 해킹](https://www.acmicpc.net/problem/1325) dfs
+
+### 8. 프로그래머스 lv2 [게임 맵 최단거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844) bfs o
