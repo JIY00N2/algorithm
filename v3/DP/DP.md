@@ -9,3 +9,5 @@
 ### 5. 리트코드 238 medium [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/) 누적곱 DP?
 
 ### 6. 백준 1106 골드4 [호텔](https://www.acmicpc.net/problem/1106) DP, 배낭문제(냅색문제)
+
+### 7. 백준 1890 실1 [점프](https://www.acmicpc.net/problem/1890) DP
