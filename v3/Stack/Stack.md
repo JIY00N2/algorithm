@@ -9,3 +9,5 @@
 ### 5. 백준 1406 실2 [에디터](https://www.acmicpc.net/problem/1406) 2개의 스택
 
 ### 6. 백준 1874 실2 [스택 수열](https://www.acmicpc.net/problem/1874) 스택 o
+
+### 7. 백준 1935 실3 [후위 표기식2](https://www.acmicpc.net/problem/1935) 스택, map
