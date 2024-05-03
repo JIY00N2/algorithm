@@ -11,3 +11,5 @@
 ### 6. 백준 1874 실2 [스택 수열](https://www.acmicpc.net/problem/1874) 스택 o
 
 ### 7. 백준 1935 실3 [후위 표기식2](https://www.acmicpc.net/problem/1935) 스택, map
+
+### 8. 백준 1966 실3 [프린터 큐](https://www.acmicpc.net/problem/1966) 스택,큐 o
