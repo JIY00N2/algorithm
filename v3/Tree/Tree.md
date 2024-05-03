@@ -3,3 +3,5 @@
 ### 2. 리트코드 104 easy [Maximum Depth Of A Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) levelorder(bfs), postorder(dfs)
 
 ### 3. 리트코드 543 easy [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/description/) postorder(dfs)
+
+### 4. 백준 1991 실1 [트리 순회](https://www.acmicpc.net/problem/1991) preorder, inorder, postorder
