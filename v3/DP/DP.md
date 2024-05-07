@@ -13,3 +13,5 @@
 ### 7. 백준 1890 실1 [점프](https://www.acmicpc.net/problem/1890) DP
 
 ### 8. 백준 1912 실2 [연속합](https://www.acmicpc.net/problem/1912) DP
+
+### 9. 백준 2156 실1 [포도주 시식](https://www.acmicpc.net/problem/2156) DP
