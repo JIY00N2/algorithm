@@ -13,3 +13,5 @@
 ### 7. 백준 1325 실1 [효율적인 해킹](https://www.acmicpc.net/problem/1325) dfs
 
 ### 8. 프로그래머스 lv2 [게임 맵 최단거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844) bfs o
+
+### 9. 백준 2178 실1 [미로 탐색](https://www.acmicpc.net/problem/2178) bfs o
