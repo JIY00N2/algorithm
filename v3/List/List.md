@@ -9,3 +9,5 @@
 ### 5. 리트코드 11 medium [Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/) 투 포인터
 
 ### 6. 리트코드 15 medium [3Sum](https://leetcode.com/problems/3sum/description/) 투 포인터
+
+### 7. 프로그래머스 lv2 [연속된 부분 수열의 합](https://school.programmers.co.kr/learn/courses/30/lessons/178870) 투 포인터
