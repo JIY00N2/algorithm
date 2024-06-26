@@ -17,3 +17,5 @@
 ### 9. 백준 2156 실1 [포도주 시식](https://www.acmicpc.net/problem/2156) DP
 
 ### 10. 프로그래머스 lv2 [2\*n 타일링](https://school.programmers.co.kr/learn/courses/30/lessons/12900?language=javascript) DP
+
+### 11. 백준 22869 실1 [징검다리 건너기(small)](https://www.acmicpc.net/problem/22869) DP
