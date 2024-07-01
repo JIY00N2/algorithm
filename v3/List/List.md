@@ -17,3 +17,5 @@
 ### 9. 백준 21318 실1 [피아노 체조](https://www.acmicpc.net/problem/21318) 누적합
 
 ### 10. 백준 20922 실1 [겹치는 건 싫어](https://www.acmicpc.net/problem/20922) 투포인터
+
+### 11. 백준 21275 실2 [폰 호석만](https://www.acmicpc.net/problem/21275) 브루트포스, for문 2개
