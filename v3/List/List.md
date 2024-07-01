@@ -13,3 +13,5 @@
 ### 7. 프로그래머스 lv2 [연속된 부분 수열의 합](https://school.programmers.co.kr/learn/courses/30/lessons/178870) 투 포인터
 
 ### 8. 백준 22857, 22862 실2 [가장 긴 짝수 연속한 부분 수열 (small)](https://www.acmicpc.net/problem/22857), [가장 긴 짝수 연속한 부분 수열 (large)](https://www.acmicpc.net/problem/22862)x 투포인터
+
+### 9. 백준 21318 실1 [피아노 체조](https://www.acmicpc.net/problem/21318) 누적합
