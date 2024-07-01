@@ -15,3 +15,5 @@
 ### 8. 백준 22857, 22862 실2 [가장 긴 짝수 연속한 부분 수열 (small)](https://www.acmicpc.net/problem/22857), [가장 긴 짝수 연속한 부분 수열 (large)](https://www.acmicpc.net/problem/22862)x 투포인터
 
 ### 9. 백준 21318 실1 [피아노 체조](https://www.acmicpc.net/problem/21318) 누적합
+
+### 10. 백준 20922 실1 [겹치는 건 싫어](https://www.acmicpc.net/problem/20922) 투포인터
