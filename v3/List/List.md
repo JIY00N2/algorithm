@@ -19,3 +19,5 @@
 ### 10. 백준 20922 실1 [겹치는 건 싫어](https://www.acmicpc.net/problem/20922) 투포인터
 
 ### 11. 백준 21275 실2 [폰 호석만](https://www.acmicpc.net/problem/21275) 브루트포스, for문 2개
+
+### 12. 백준 20438 실2 [출석체크](https://www.acmicpc.net/problem/20438) 누적합
