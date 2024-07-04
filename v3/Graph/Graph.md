@@ -15,3 +15,5 @@
 ### 8. 프로그래머스 lv2 [게임 맵 최단거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844) bfs o
 
 ### 9. 백준 2178 실1 [미로 탐색](https://www.acmicpc.net/problem/2178) bfs o
+
+### 10. 백준 2667 실1 [단지 번호 붙이기](https://www.acmicpc.net/problem/2667) bfs x
